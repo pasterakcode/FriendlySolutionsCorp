@@ -1,0 +1,36 @@
+.taskCard {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid green;
+}
+.taskCard div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 80%;
+    height: 100px;
+}
+.taskCard .id {
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 100%;
+}
+.taskCard .descriptions {
+    width: 100%;
+}
+.taskCard .assignedTo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.taskCard div h5 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
