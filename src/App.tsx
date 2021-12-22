@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import TaskCard from './components/taskCard/TaskCard';
 import FindBar from './components/findBar/FindBar';
+import LoadingPage from './components/loadingPage/LoadingPage';
 import { Task } from './interface/interface';
 import friendlyTasks from './api/Api';
 import './App.css';
-import LoadingPage from './components/loadingPage/LoadingPage';
 
 function App() {
 	const [tasks, setTasks] = useState<Task[] | null>(null);

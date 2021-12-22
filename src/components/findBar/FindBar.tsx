@@ -16,7 +16,7 @@ const FindBar = ({ onHandleFindBarChars, tasksQty }: FindBarProps) => {
 				id='toFind'
 				type='text'
 				value={charsToFind}
-				placeholder='find ...'
+				placeholder='Find ...'
 				onChange={handleInputChars}
 			/>
 			<label htmlFor='toFind'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Task } from '../../interface/interface';
 import styles from './TaskCard.module.css';
 
