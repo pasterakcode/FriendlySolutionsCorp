@@ -4,6 +4,7 @@ import FindBar from './components/findBar/FindBar';
 import { Task } from './interface/interface';
 import friendlyTasks from './api/Api';
 import './App.css';
+import LoadingPage from './components/loadingPage/LoadingPage';
 
 function App() {
 	const [tasks, setTasks] = useState<Task[] | null>(null);
@@ -28,7 +29,7 @@ function App() {
 	};
 	return (
 		<div className='App'>
-			<p>Friendly Tasks Menager</p>
+			<h1 className='AppTitle'>Friendly Tasks Manager</h1>
 			{tasks ? (
 				<>
 					<FindBar
@@ -40,7 +41,7 @@ function App() {
 					))}
 				</>
 			) : (
-				<p>Loading page</p>
+				<LoadingPage />
 			)}
 		</div>
 	);

@@ -1,36 +1,132 @@
 .taskCard {
-    position: relative;
-    display: flex;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-top: 1px solid rgb(230, 136, 222);
+	border-bottom: 1px solid rgb(199, 0, 182);
+	margin: 2rem 0;
+	padding: 0.5rem;
+	width: 100%;
+	max-width: 800px;
+}
+.taskCard h5 {
+	position: absolute;
+	left: 0.5rem;
+	top: 0;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: gray;
+}
+.taskCard p {
+	margin-top: 2rem;
+	font-size: 2rem;
+	line-height: 2rem;
+	font-weight: lighter;
+}
+.mainInformation {
+	display: flex;
+}
+
+.mainInformation .id {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+}
+.mainInformation .description {
+	position: relative;
+	width: 90%;
+}
+.id p,
+.description p {
+	font-weight: 500;
+}
+.moreDetails {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+.moreDetails .boxReceivedStatusPriority {
+	display: flex;
+	justify-content: center;
+    margin: 1rem 0;
+}
+.moreDetails .receivedDate,
+.moreDetails .status,
+.moreDetails .priority {
+	position: relative;
+	width: 33%;
+	max-width: 200px;
+    padding-top: 1.5rem;
+}
+.boxAssignedTo {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 1.5rem 0;
+	padding-top: 1.5rem;
+}
+.personNone {
+	align-self: flex-start;
+	margin-left: 2rem;
+}
+.boxAssignedTo .person {
+	position: relative;
+	display: flex;
+	flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    border: 2px solid green;
+	align-items: flex-end;
+	margin: 1rem 0.5rem;
+	width: 100%;
 }
-.taskCard div {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-    width: 80%;
-    height: 100px;
+.person p,
+.person h5 {
+	position: relative;
+	margin-top: 0;
+	margin-left: 0.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
-.taskCard .id {
-    position: absolute;
-    left: 0px;
-    width: 20px;
-    height: 100%;
+
+.btn {
+    width: auto;
+    padding: .8rem 1.6rem;
+    margin: 1rem;
+    align-self: end;
+    border-radius: 50px;
+    border:2px solid rgb(199, 0, 182);
+    font-weight: bold;
+    color:rgb(199, 0, 182);
+	background-color: transparent;
+	cursor: pointer;
+	transition: .3s ease-in-out;
 }
-.taskCard .descriptions {
-    width: 100%;
+.btn:hover {
+	background-color: rgb(230, 136, 222);
+	color: white;
 }
-.taskCard .assignedTo {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.taskCard div h5 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 0;
+@media screen and (min-width: 464px) {
+	.taskCard {
+		margin: 2rem 0;
+		padding: 2rem;
+		border-radius: 50px;
+		border: 1px solid rgb(199, 0, 182);
+        box-shadow: 3px 3px 6px gray;
+	
+	}
+	.person p,
+	.person h5 {
+		margin-left: 1.2rem;
+	}
+    .boxAssignedTo {
+        margin-bottom: 0;
+    }
+    .btn {
+        margin-bottom: 0;
+    }
 }

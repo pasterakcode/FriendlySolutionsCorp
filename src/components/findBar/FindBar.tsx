@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Task } from '../../interface/interface';
+import styles from './FindBar.module.css';
 interface FindBarProps {
 	tasksQty: number;
 	onHandleFindBarChars: Function;
@@ -10,17 +10,18 @@ const FindBar = ({ onHandleFindBarChars, tasksQty }: FindBarProps) => {
 		setCharsToFind(e.target.value);
 		onHandleFindBarChars(e.target.value);
 	};
-	const style = {
-		border: '2px solid red',
-		margin: '20px',
-		padding: '20px',
-	};
 	return (
-		<div style={style}>
-			<input type='text' value={charsToFind} onChange={handleInputChars} />
-			<p>
-				We found: {tasksQty} {tasksQty > 1 ? 'tasks' : 'task'}.
-			</p>
+		<div className={styles.findBar}>
+			<input
+				id='toFind'
+				type='text'
+				value={charsToFind}
+				placeholder='find ...'
+				onChange={handleInputChars}
+			/>
+			<label htmlFor='toFind'>
+				We found {tasksQty} {tasksQty > 1 ? 'tasks' : 'task'}.
+			</label>
 		</div>
 	);
 };

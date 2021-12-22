@@ -1,0 +1,29 @@
+.loadingPage {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loadingCircle {
+    width: 150px;
+    height: 150px;
+    border: 6px dotted rgb(199, 0, 182);
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    animation: loadingSpin infinite 5s linear;
+}
+.loadingInfo {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+@keyframes loadingSpin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+

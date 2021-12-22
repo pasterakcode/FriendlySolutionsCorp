@@ -176,7 +176,7 @@ const friendlyTasks = (): Promise<FriendlyTasks> => {
 					],
 				},
 			});
-		}, 1000);
+		}, 500);
 	});
 };
 export default friendlyTasks;
